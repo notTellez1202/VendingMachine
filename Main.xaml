@@ -66,7 +66,7 @@
           <av:PointCollection x:Key="ConnectorLocation">321,77.5 321,107.5 320,107.5 320,143.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <State x:Name="__ReferenceID4" sap2010:Annotation.AnnotationText="Asked to user to choose the initial credit&#xD;&#xA;" DisplayName="Get Initial Credit" sap:VirtualizedContainerService.HintSize="134,133" sap2010:WorkflowViewState.IdRef="State_1">
+      <State x:Name="__ReferenceID4" sap2010:Annotation.AnnotationText="Asked to user to choose the initial credit&#xD;&#xA;" DisplayName="Get Initial Credit" sap:VirtualizedContainerService.HintSize="771,1233" sap2010:WorkflowViewState.IdRef="State_1">
         <State.Entry>
           <Sequence sap:VirtualizedContainerService.HintSize="725,804" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <sap:WorkflowViewStateService.ViewState>
@@ -79,7 +79,7 @@
                 <OutArgument x:TypeArguments="x:String">[userCredit]</OutArgument>
               </ui:InputDialog.Result>
             </ui:InputDialog>
-            <If Condition="[Int32.TryParse(userCredit, 0)]" DisplayName="If Input Is Valid" sap:VirtualizedContainerService.HintSize="683,434" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[Int32.TryParse(userCredit, 0) and (userCredit.Equals(&quot;5&quot;) or userCredit.Equals(&quot;10&quot;) or userCredit.Equals(&quot;20&quot;))]" DisplayName="If Input Is Valid" sap:VirtualizedContainerService.HintSize="683,434" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
                 <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_2">
                   <Assign.To>
